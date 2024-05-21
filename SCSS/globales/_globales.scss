@@ -1,0 +1,224 @@
+@import "../variables/variables";
+
+/* Estilos globales */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $fuente-parrafos;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $fuente-heading;
+  line-height: 1.3;
+  font-weight: bold;
+}
+h1 {
+  font-size: 4.8rem;
+}
+h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+h3 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+h4 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+h5 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+p {
+  font-family: $fuente-parrafos;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* LAYOUT - GRID */
+
+/* Estilos para tablet y desktop */
+
+@media (min-width: 768px), (min-width: 1280px) {
+  body {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+  }
+   /*Columnas index - Columnas nuestrasguias*/
+  .grid-container {
+    main {
+      section {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+      }
+    }
+
+    .nuestras-guias {
+      div {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        align-items: center;
+        column-gap: 2rem;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+/* MEDIDAS RESPONSIVES GENERALES PARA EL MAIN */
+
+/* Mobile */
+
+main {
+  max-width: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*tablet y desktop*/
+@media (min-width: 768px), (min-width: 1280px) {
+  main {
+    max-width: 120%;
+  }
+}
+
+/* Estilos para el Header: background únicamente para Index y Contacto*/
+
+.bg-img {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  font-family: $fuente-heading;
+  color: $blanco;
+  padding: 10rem;
+  margin-top: 15px;
+}
+
+/* Estilos para el Logo: Header y Footer */
+
+a {
+  color: $blanco;
+  h1,
+  h2 {
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+  }
+  span {
+    font-weight: bold;
+  }
+  h1 {
+    span {
+      span {
+        align-items: center;
+      }
+    }
+  }
+}
+
+/* Estilos para el Nav */
+
+/* Nav mobile version */
+header {
+  nav {
+    background-color: $negro;
+    min-width: 100%;
+    padding: 1px;
+    display: grid;
+    grid-template-rows: 40px 40px;
+    align-items: center;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+
+    #iconos-pages {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+/*Nav tablet y desktop version*/
+
+@media (min-width: 768px), (min-width: 1280px) {
+  header {
+    nav {
+      background-color: $negro;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      #logo-booster {
+        margin-left: 20px;
+      }
+      #iconos-pages {
+        margin-right: 20px;
+        align-items: center;
+      }
+    }
+  }
+}
+
+/*Enlaces-Iconos: interactivos del nav*/
+
+nav {
+  a:hover {
+    font-weight: bold;
+    color: $primario;
+  }
+
+  svg:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+}
+
+/*Estilos del footer*/
+
+/*Enlaces-Iconos: interactivos del footer*/
+
+footer {
+  a:hover {
+    color: $primario;
+  }
+  div {
+    svg:hover {
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+    }
+  }
+}

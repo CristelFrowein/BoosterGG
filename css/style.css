@@ -1,15 +1,5 @@
-/*GLOBALES*/
-
-:root {
-  --fuenteHeading: "PT Sans", sans-serif;
-  --fuenteParrafos: "Open Sans", sans-serif;
-
-  --primario: #6156a4;
-  --blanco: #ffffff;
-  --negro: #000;
-  --gris: #414141;
-}
-
+@charset "UTF-8";
+/* Estilos globales */
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -22,7 +12,7 @@ html {
 }
 
 body {
-  font-family: var(--fuenteParrafos);
+  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   line-height: 2;
 }
@@ -36,29 +26,34 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--fuenteHeading);
+  font-family: "PT Sans", sans-serif;
   line-height: 1.3;
   font-weight: bold;
 }
+
 h1 {
   font-size: 4.8rem;
 }
+
 h2 {
   font-size: 4rem;
   font-weight: 800;
   text-align: center;
   margin-bottom: 2.5rem;
 }
+
 h3 {
   font-size: 3.2rem;
   text-align: center;
   margin-bottom: 2.5rem;
 }
+
 h4 {
   font-size: 2.5rem;
   text-transform: uppercase;
   margin: 0;
 }
+
 h5 {
   font-size: 1.8rem;
   margin-top: 2rem;
@@ -66,28 +61,27 @@ h5 {
 }
 
 p {
-  font-family: var(--fuenteParrafos);
+  font-family: "Open Sans", sans-serif;
 }
 
 img {
   max-width: 100%;
 }
 
-/**LAYOUT - GRID**/
-/* TABLET Y DESKTOP*/
+/* LAYOUT - GRID */
+/* Estilos para tablet y desktop */
 @media (min-width: 768px), (min-width: 1280px) {
   body {
     display: grid;
     grid-template-rows: auto auto auto auto;
   }
-  /*columnas index*/
+  /*Columnas index - Columnas nuestrasguias*/
   .grid-container main section {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 4rem;
   }
-  /*columnas nuestrasguias*/
   .grid-container .nuestras-guias div {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -111,22 +105,19 @@ main {
     max-width: 120%;
   }
 }
-
-/** HEADER BACKGROUND ÚNICAMENTE PARA INDEX Y CONTACTO  **/
-
+/* Estilos para el Header: background únicamente para Index y Contacto*/
 .bg-img {
   background-image: url(../img/bg.jpg);
   background-size: cover;
-  font-family: var(--fuenteHeading);
-  color: var(--blanco);
+  font-family: "PT Sans", sans-serif;
+  color: #ffffff;
   padding: 10rem;
   margin-top: 15px;
 }
 
-/** LOGO: HEADER Y FOOTER **/
-
+/* Estilos para el Logo: Header y Footer */
 a {
-  color: var(--blanco);
+  color: #ffffff;
 }
 a h1,
 a h2 {
@@ -135,18 +126,16 @@ a h2 {
   text-align: center;
 }
 a span {
-  font-weight: 700;
+  font-weight: bold;
 }
 a h1 span span {
   align-items: center;
 }
 
-/** NAV **/
-
-/*mobile*/
-
+/* Estilos para el Nav */
+/* Nav mobile version */
 header nav {
-  background-color: var(--negro);
+  background-color: #000;
   min-width: 100%;
   padding: 1px;
   display: grid;
@@ -157,56 +146,50 @@ header nav {
   top: 0;
   z-index: 9999;
 }
-/* iconos flex */
-nav #iconos-pages {
+header nav #iconos-pages {
   display: flex;
   justify-content: space-evenly;
 }
 
-/*tablet y desktop*/
-
+/*Nav tablet y desktop version*/
 @media (min-width: 768px), (min-width: 1280px) {
   header nav {
-    background-color: var(--negro);
+    background-color: #000;
     width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 20px;
   }
-  nav #logo-booster {
+  header nav #logo-booster {
     margin-left: 20px;
   }
-  nav #iconos-pages {
+  header nav #iconos-pages {
     margin-right: 20px;
     align-items: center;
   }
 }
-
-/* ENLACES INTERACTIVOS DEL NAV */
-
+/*Enlaces-Iconos: interactivos del nav*/
 nav a:hover {
   font-weight: bold;
-  color: var(--primario);
+  color: #6156a4;
 }
 nav svg:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease;
 }
 
-/*FOOTER INTERACTIVO*/
-
+/*Estilos del footer*/
+/*Enlaces-Iconos: interactivos del footer*/
 footer a:hover {
-  color: var(--primario);
+  color: #6156a4;
 }
 footer div svg:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease;
 }
 
-/* INDEX */
-
-/* INDEX - CONTENIDO PRINCIPAL */
-
+/*Estilos del INDEX */
+/*Contenido principal*/
 main article {
   border-bottom: 0.5px solid var(--gris);
   margin-bottom: 2rem;
@@ -221,9 +204,9 @@ main article h4 {
 }
 main article a {
   display: block;
-  background-color: var(--negro);
-  color: var(--blanco);
-  font-family: var(--fuenteHeading);
+  background-color: #000;
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
   font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -232,35 +215,32 @@ main article a {
   margin-bottom: 2rem;
   border: none;
 }
+
 @media (min-width: 768px) {
   main article a {
     display: inline-block;
   }
+  main article a:hover {
+    cursor: pointer;
+    background-color: #6156a4;
+    color: #000;
+  }
 }
-main article a:hover {
-  cursor: pointer;
-  background-color: var(--primario);
-  color: var(--negro);
-}
-
-/* INDEX - CONTENIDO DEL ASIDE */
-
+/* Contenido del Aside */
 @media (min-width: 768px), (min-width: 1280px) {
   aside {
     position: relative;
     top: 90px;
   }
 }
-
 aside h4 {
   margin-bottom: 15px;
 }
-
 aside article a {
   border: none;
-  background-color: var(--primario);
-  color: var(--negro);
-  font-family: var(--fuenteHeading);
+  background-color: #6156a4;
+  color: #000;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -270,26 +250,25 @@ aside article a {
   margin-top: 3px;
   margin-bottom: 1rem;
 }
-
 aside article a:hover {
   cursor: pointer;
-  background-color: var(--negro);
-  color: var(--blanco);
+  background-color: #000;
+  color: #ffffff;
 }
 
-/** CONTACTO **/
+/* Estilos para contacto */
 section {
-  margin-top: 120px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
 form {
-  background-color: var(--negro);
+  background-color: #000;
   width: min(60rem, 100%);
   margin: 0 auto;
   padding: 2rem;
   border-radius: 2rem;
-  box-shadow: 3px 3px 6px rgba(0.2, 0.2, 0.2, 0.4);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 form fieldset {
   border: none;
@@ -300,11 +279,10 @@ form legend {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: var(--blanco);
+  color: #ffffff;
 }
 
-/** CLASES PARA CONTACTO **/
-
+/* Clases para contacto */
 @media (min-width: 768px) {
   .contenedor-campos {
     display: grid;
@@ -313,16 +291,14 @@ form legend {
     column-gap: 1rem;
   }
 }
-.contenedor-campos div:nth-child(3),
-div:nth-child(4) {
-  grid-column: 1 / 3;
-}
-
 .contenedor-campos div {
   margin-bottom: 1rem;
 }
+.contenedor-campos div:nth-child(3), .contenedor-campos div:nth-child(4) {
+  grid-column: 1/3;
+}
 .contenedor-campos div label {
-  color: var(--blanco);
+  color: #ffffff;
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
@@ -334,7 +310,6 @@ div:nth-child(4) {
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
-
 .contenedor-campos input {
   width: 100%;
   border: none;
@@ -343,8 +318,8 @@ div:nth-child(4) {
 }
 
 .boton-2 {
-  background-color: var(--gris);
-  color: var(--blanco);
+  background-color: #414141;
+  color: #ffffff;
   padding: 1rem 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -359,16 +334,16 @@ div:nth-child(4) {
 .boton-2:hover {
   cursor: pointer;
   font-weight: bold;
-  border: 2.5px solid var(--blanco);
-  transition: var(--negro) 0.5s;
-  color: var(--blanco);
+  border: 2.5px solid #ffffff;
+  transition: #000 0.5s;
+  color: #ffffff;
 }
 
-/** NOTICIAS **/
-
+/* Estilos para noticias */
 .noticias {
   margin-top: 90px;
 }
+
 article div {
   text-align: center;
 }
@@ -387,38 +362,32 @@ article div p {
     margin-left: 10px;
   }
 }
-
-/** NUESTRASGUÍAS **/
-
+/* Estilos para nuestrasguias */
 .nuestras-guias {
   margin-top: 90px;
 }
-
-.nuestras-guias ul,
-.nuestras-guias li {
+.nuestras-guias ul, .nuestras-guias li {
   list-style: none;
   text-align: start;
-  font-family: var(--fuenteParrafos);
+  font-family: "Open Sans", sans-serif;
 }
-
 .nuestras-guias article p {
   text-align: center;
 }
-
 .nuestras-guias div img {
   min-width: 70%;
 }
-
 .nuestras-guias span {
   font-weight: bold;
 }
 
-/** VALORANT **/
+/* Estilos para valorant */
 .valorant {
   margin-top: 90px;
 }
-
-.valorant article p,
+.valorant article p {
+  text-align: center;
+}
 .valorant h5 {
   text-align: center;
 }
@@ -427,3 +396,5 @@ video {
   width: 100%;
   height: 50%;
 }
+
+/*# sourceMappingURL=style.css.map */
