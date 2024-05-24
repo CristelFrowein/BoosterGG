@@ -1,0 +1,10 @@
+//mixins
+
+//mixin para etiquetas A funcionando como botón y clase .boton-2
+@mixin utilidades {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}

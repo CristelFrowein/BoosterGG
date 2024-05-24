@@ -203,17 +203,18 @@ main article h4 {
   margin-bottom: 9px;
 }
 main article a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border: none;
   display: block;
   background-color: #000;
   color: #ffffff;
   font-family: "PT Sans", sans-serif;
   font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
   padding: 1rem 3rem;
   margin-bottom: 2rem;
-  border: none;
 }
 
 @media (min-width: 768px) {
@@ -237,14 +238,15 @@ aside h4 {
   margin-bottom: 15px;
 }
 aside article a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
   border: none;
   background-color: #6156a4;
   color: #000;
   font-family: "PT Sans", sans-serif;
-  font-weight: bold;
   font-size: 1.8rem;
-  text-transform: uppercase;
-  text-align: center;
   display: block;
   padding: 1rem 3rem;
   margin-top: 3px;
@@ -277,9 +279,9 @@ form legend {
   text-align: center;
   font-size: 1.8rem;
   text-transform: uppercase;
-  font-weight: 700;
   margin-bottom: 2rem;
   color: #ffffff;
+  font-weight: bold;
 }
 
 /* Clases para contacto */
@@ -318,18 +320,18 @@ form legend {
 }
 
 .boton-2 {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border: none;
   background-color: #414141;
   color: #ffffff;
   padding: 1rem 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
   border-radius: 0.5rem;
-  text-align: center;
-  border: none;
+  font-size: 1.5rem;
 }
 .boton-2:hover {
   cursor: pointer;
@@ -366,7 +368,8 @@ article div p {
 .nuestras-guias {
   margin-top: 90px;
 }
-.nuestras-guias ul, .nuestras-guias li {
+.nuestras-guias ul,
+.nuestras-guias li {
   list-style: none;
   text-align: start;
   font-family: "Open Sans", sans-serif;

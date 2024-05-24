@@ -1,7 +1,10 @@
 //imports:
 
-@import "variables/variables";
+@import "utilidades/variables";
 @import "globales/globales";
+@import "utilidades/mixin";
+
+
 /*Estilos del INDEX */
 
 /*Contenido principal*/
@@ -21,17 +24,14 @@ main {
       margin-bottom: 9px;
     }
     a {
+      @include utilidades;
       display: block;
       background-color: $negro;
       color: $blanco;
       font-family: $fuente-heading;
       font-size: 1.8rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-align: center;
       padding: 1rem 3rem;
       margin-bottom: 2rem;
-      border: none;
     }
   }
 }
@@ -43,7 +43,7 @@ main {
 
         &:hover {
           cursor: pointer;
-          background-color:$primario;
+          background-color: $primario;
           color: $negro;
         }
       }
@@ -66,14 +66,11 @@ aside {
   }
   article {
     a {
-      border: none;
+      @include utilidades;
       background-color: $primario;
       color: $negro;
       font-family: $fuente-heading;
-      font-weight: bold;
       font-size: 1.8rem;
-      text-transform: uppercase;
-      text-align: center;
       display: block;
       padding: 1rem 3rem;
       margin-top: 3px;
@@ -107,12 +104,14 @@ form {
     border: none;
   }
   legend {
+  
     text-align: center;
     font-size: 1.8rem;
     text-transform: uppercase;
-    font-weight: 700;
     margin-bottom: 2rem;
     color: $blanco;
+    font-weight: bold;
+    
   }
 }
 
@@ -158,18 +157,14 @@ form {
 }
 
 .boton-2 {
+  @include utilidades;
   background-color: $gris;
   color: $blanco;
   padding: 1rem 3rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  font-size: 1.5rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
   border-radius: 0.5rem;
-  text-align: center;
-  border: none;
+  font-size: 1.5rem;
 
   &:hover {
     cursor: pointer;
@@ -216,7 +211,8 @@ article {
 .nuestras-guias {
   margin-top: 90px;
 
-  ul, li {
+  ul,
+  li {
     list-style: none;
     text-align: start;
     font-family: $fuente-parrafos;
@@ -236,16 +232,15 @@ article {
   }
 }
 
-
 /* Estilos para valorant */
 
 .valorant {
   margin-top: 90px;
 
   article {
-  p {
-    text-align: center;
-  }
+    p {
+      text-align: center;
+    }
   }
 
   h5 {
