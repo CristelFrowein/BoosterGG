@@ -4,7 +4,6 @@
 @import "globales/globales";
 @import "utilidades/mixin";
 
-
 /*Estilos del INDEX */
 
 /*Contenido principal*/
@@ -88,7 +87,7 @@ aside {
 /* Estilos para contacto */
 
 section {
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 50px;
 }
 
@@ -104,14 +103,12 @@ form {
     border: none;
   }
   legend {
-  
     text-align: center;
     font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
     color: $blanco;
     font-weight: bold;
-    
   }
 }
 
@@ -146,6 +143,7 @@ form {
       border: none;
       padding: 1.5rem;
       border-radius: 0.5rem;
+      resize: none;
     }
   }
   input {
@@ -161,8 +159,8 @@ form {
   background-color: $gris;
   color: $blanco;
   padding: 1rem 3rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   border-radius: 0.5rem;
   font-size: 1.5rem;
 
@@ -211,6 +209,10 @@ article {
 .nuestras-guias {
   margin-top: 90px;
 
+  p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
   ul,
   li {
     list-style: none;
@@ -236,7 +238,7 @@ article {
 
 .valorant {
   margin-top: 90px;
-
+ 
   article {
     p {
       text-align: center;
@@ -251,4 +253,7 @@ article {
 video {
   width: 100%;
   height: 50%;
+
+  border: 0.5px solid $negro;
+  box-shadow: 0 0 6px $primario;
 }
