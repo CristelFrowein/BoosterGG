@@ -1,0 +1,32 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* Estilos para nuestrasguias */
+
+.nuestras-guias {
+    margin-top: 90px;
+  
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    ul,
+    li {
+      list-style: none;
+      text-align: start;
+      font-family: $fuente-parrafos;
+    }
+    article {
+      p {
+        text-align: center;
+      }
+    }
+    div {
+      img {
+        min-width: 70%;
+      }
+    }
+    span {
+      font-weight: bold;
+    }
+  }

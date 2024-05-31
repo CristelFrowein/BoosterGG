@@ -1,0 +1,83 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/*Estilos del INDEX */
+
+/*Contenido principal*/
+
+main {
+    article {
+      border-bottom: 0.5px solid var(--gris);
+      margin-bottom: 2rem;
+  
+      &:last-of-type {
+        border: none;
+        margin-bottom: 0;
+      }
+  
+      h4 {
+        margin-top: 10px;
+        margin-bottom: 9px;
+      }
+      a {
+        @include utilidades;
+        display: block;
+        background-color: $negro;
+        color: $blanco;
+        font-family: $fuente-heading;
+        font-size: 1.8rem;
+        padding: 1rem 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    main {
+      article {
+        a {
+          display: inline-block;
+  
+          &:hover {
+            cursor: pointer;
+            background-color: $primario;
+            color: $negro;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Contenido del Aside */
+  
+  @media (min-width: 768px), (min-width: 1280px) {
+    aside {
+      position: relative;
+      top: 90px;
+    }
+  }
+  
+  aside {
+    h4 {
+      margin-bottom: 15px;
+    }
+    article {
+      a {
+        @include utilidades;
+        background-color: $primario;
+        color: $negro;
+        font-family: $fuente-heading;
+        font-size: 1.8rem;
+        display: block;
+        padding: 1rem 3rem;
+        margin-top: 3px;
+        margin-bottom: 1rem;
+  
+        &:hover {
+          cursor: pointer;
+          background-color: $negro;
+          color: $blanco;
+        }
+      }
+    }
+  }
+  

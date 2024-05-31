@@ -1,0 +1,28 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+
+/* Estilos para valorant */
+
+.valorant {
+    margin-top: 90px;
+   
+    article {
+      p {
+        text-align: center;
+      }
+    }
+  
+    h5 {
+      text-align: center;
+    }
+  }
+  
+  video {
+    width: 100%;
+    height: 50%;
+  
+    border: 0.5px solid $negro;
+    box-shadow: 0 0 6px $primario;
+  }
+  
