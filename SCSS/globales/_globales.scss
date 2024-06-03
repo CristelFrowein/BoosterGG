@@ -122,11 +122,21 @@ main {
   background-size: cover;
   font-family: $fuente-heading;
   color: $blanco;
-  padding: 10rem;
-  margin-top: 15px;
+  margin-top: 120px;
 }
 
-/* Estilos para el Logo: Header y Footer */
+@media (min-width: 768px), (min-width: 1280px) {
+  .bg-img {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    font-family: $fuente-heading;
+    color: $blanco;
+    padding: 10rem;
+    margin-top: 15px;
+  }
+}
+
+/* Estilos para el Logo: Header: NAV y Footer */
 
 a {
   color: $blanco;
@@ -155,30 +165,33 @@ header {
   nav {
     background-color: $negro;
     min-width: 100%;
-    padding: 2px;
+    padding: 6px;
     align-items: center;
     gap: 1rem;
     position: fixed;
     top: 0;
     z-index: 9999;
-    
+
     #position {
       display: flex;
       justify-content: space-between;
+      gap: 2rem;
       padding: 1px;
       align-items: center;
-    }
-    
-    #logo-booster {
-      align-items: center;
+
+      #iconos-pages {
+        a {
+          margin-right: -1rem;
+          img {
+            padding: 2.5px;
+            min-width: 90%;
+          }
+        }
+      }
     }
 
-    #iconos-pages {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    #logo-booster {
       align-items: center;
-      
     }
   }
 }
@@ -198,8 +211,6 @@ header {
         margin-left: 20px;
       }
       #iconos-pages {
-        gap: 0.2px;
-        margin-right: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -217,9 +228,8 @@ nav {
     color: $primario;
   }
 
-  svg:hover {
+  #iconos-pages:hover {
     transform: scale(1.2);
-    transform: rotate(45deg);
     transition: transform 0.3s ease;
   }
 }

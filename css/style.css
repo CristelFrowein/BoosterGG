@@ -111,11 +111,20 @@ main {
   background-size: cover;
   font-family: "PT Sans", sans-serif;
   color: #ffffff;
-  padding: 10rem;
-  margin-top: 15px;
+  margin-top: 120px;
 }
 
-/* Estilos para el Logo: Header y Footer */
+@media (min-width: 768px), (min-width: 1280px) {
+  .bg-img {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    font-family: "PT Sans", sans-serif;
+    color: #ffffff;
+    padding: 10rem;
+    margin-top: 15px;
+  }
+}
+/* Estilos para el Logo: Header: NAV y Footer */
 a {
   color: #ffffff;
 }
@@ -137,7 +146,7 @@ a h1 span span {
 header nav {
   background-color: #000;
   min-width: 100%;
-  padding: 2px;
+  padding: 6px;
   align-items: center;
   gap: 1rem;
   position: fixed;
@@ -147,16 +156,18 @@ header nav {
 header nav #position {
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
   padding: 1px;
   align-items: center;
 }
-header nav #logo-booster {
-  align-items: center;
+header nav #position #iconos-pages a {
+  margin-right: -1rem;
 }
-header nav #iconos-pages {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+header nav #position #iconos-pages a img {
+  padding: 2.5px;
+  min-width: 90%;
+}
+header nav #logo-booster {
   align-items: center;
 }
 
@@ -173,8 +184,6 @@ header nav #iconos-pages {
     margin-left: 20px;
   }
   header nav #iconos-pages {
-    gap: 0.2px;
-    margin-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -186,9 +195,8 @@ nav a:hover {
   font-weight: bold;
   color: #6156a4;
 }
-nav svg:hover {
+nav #iconos-pages:hover {
   transform: scale(1.2);
-  transform: rotate(45deg);
   transition: transform 0.3s ease;
 }
 
@@ -358,7 +366,7 @@ form legend {
 
 /* Estilos para noticias */
 .noticias {
-  margin-top: 90px;
+  margin-top: 140px;
 }
 
 article div {
@@ -381,7 +389,7 @@ article div p {
 }
 /* Estilos para nuestrasguias */
 .nuestras-guias {
-  margin-top: 90px;
+  margin-top: 140px;
 }
 .nuestras-guias p {
   margin-top: 2rem;
@@ -405,7 +413,7 @@ article div p {
 
 /* Estilos para valorant */
 .valorant {
-  margin-top: 90px;
+  margin-top: 140px;
 }
 .valorant article p {
   text-align: center;
