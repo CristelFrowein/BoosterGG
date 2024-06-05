@@ -141,6 +141,50 @@ a h1 span span {
   align-items: center;
 }
 
+/*Animacion de Logo Nav */
+@keyframes logo {
+  0% {
+    color: #ffffff;
+    top: 0;
+    left: 0;
+  }
+  25% {
+    color: #414141;
+    top: 0;
+    left: auto;
+  }
+  50% {
+    color: #ffffff;
+    top: auto;
+    left: auto;
+  }
+  75% {
+    color: #414141;
+    top: auto;
+    left: 0;
+  }
+  100% {
+    color: #ffffff;
+    top: 0;
+    left: 0;
+  }
+}
+#logo-booster a {
+  position: relative;
+  transform: rotateY(0deg);
+  animation-name: logo;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-delay: 0.5;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#logo-booster:hover {
+  transform: rotateY(360deg);
+  color: #414141;
+  transition: rotateY 12s, ease-in-out 0.9s;
+}
+
 /* Estilos para el Nav */
 /* Nav mobile version */
 header nav {
@@ -189,12 +233,11 @@ header nav #logo-booster {
     justify-content: space-between;
     align-items: center;
   }
+  header nav #iconos-pages img {
+    max-width: 80px;
+  }
 }
-/*Enlaces-Iconos: interactivos del nav*/
-nav a:hover {
-  font-weight: bold;
-  color: #6156a4;
-}
+/*Iconos: interactivos del nav*/
 nav #iconos-pages:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease;
