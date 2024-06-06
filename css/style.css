@@ -141,43 +141,9 @@ a h1 span span {
   align-items: center;
 }
 
-/*Animacion de Logo Nav */
-@keyframes logo {
-  0% {
-    color: #ffffff;
-    top: 0;
-    left: 0;
-  }
-  25% {
-    color: #414141;
-    top: 0;
-    left: auto;
-  }
-  50% {
-    color: #ffffff;
-    top: auto;
-    left: auto;
-  }
-  75% {
-    color: #414141;
-    top: auto;
-    left: 0;
-  }
-  100% {
-    color: #ffffff;
-    top: 0;
-    left: 0;
-  }
-}
+/*transición del Logo*/
 #logo-booster a {
-  position: relative;
   transform: rotateY(0deg);
-  animation-name: logo;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-delay: 0.5;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 #logo-booster:hover {
   transform: rotateY(360deg);
@@ -208,8 +174,8 @@ header nav #position #iconos-pages a {
   margin-right: -1rem;
 }
 header nav #position #iconos-pages a img {
-  padding: 2.5px;
-  min-width: 90%;
+  padding: 2px;
+  min-width: 100%;
 }
 header nav #logo-booster {
   align-items: center;
@@ -222,19 +188,18 @@ header nav #logo-booster {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 20px;
   }
   header nav #logo-booster {
     margin-left: 20px;
+    align-items: center;
   }
   header nav #iconos-pages {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-  }
-  header nav #iconos-pages img {
-    max-width: 80px;
   }
 }
 /*Iconos: interactivos del nav*/

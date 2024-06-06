@@ -158,55 +158,21 @@ a {
     }
   }
 }
-/*Animacion de Logo Nav */
-
-@keyframes logo {
-  0% {
-    color: $blanco;
-    top: 0;
-    left: 0;
-  }
-  25% {
-    color: $gris;
-    top: 0;
-    left: auto;
-  }
-  50% {
-    color: $blanco;
-    top: auto;
-    left: auto;
-  }
-  75% {
-    color: $gris;
-    top: auto;
-    left: 0;
-  }
-
-  100% {
-    color: $blanco;
-    top: 0;
-    left: 0;
-  }
-}
+ 
+/*transición del Logo*/
 
 #logo-booster {
-  a {
-    position: relative;
-    transform: rotateY(0deg);
-    animation-name: logo;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-delay: 0.5;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  }
+    a {
+      
+      transform: rotateY(0deg);
+    }
 
-  &:hover {
-    transform: rotateY(360deg);
-    color: $gris;
-    transition: rotateY 12s, ease-in-out 0.9s;
+    &:hover {
+      transform: rotateY(360deg);
+      color: $gris;
+      transition: rotateY 12s, ease-in-out 0.9s;
+    }
   }
-}
 
 /* Estilos para el Nav */
 
@@ -233,8 +199,8 @@ header {
         a {
           margin-right: -1rem;
           img {
-            padding: 2.5px;
-            min-width: 90%;
+            padding: 2px;
+            min-width: 100%;
           }
         }
       }
@@ -255,20 +221,18 @@ header {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
 
       #logo-booster {
         margin-left: 20px;
+        align-items: center;
       }
       #iconos-pages {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-
-        img {
-          max-width: 80px;
-        }
       }
     }
   }
